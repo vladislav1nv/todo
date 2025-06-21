@@ -57,10 +57,12 @@ header h1 {
 
 .task-list {
     list-style-type: none;
-    margin: 20px 0;
+    margin: 20px auto;
+    padding: 0 15px;
     width: 100%;
     max-width: 500px;
     font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
 }
 
 .task-item {
