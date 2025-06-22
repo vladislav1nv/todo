@@ -50,8 +50,9 @@ def get_tasks():
     tasks = [{'id': row[0], 'text': row[1], 'done': bool(row[2])} for row in rows]
     return jsonify(tasks)
 
+init_db()
+
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True)
 
 @app.route('/')
