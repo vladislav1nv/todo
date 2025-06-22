@@ -161,28 +161,14 @@ header h1 {
     background-color: #45a049;
 }
 
-#clear-completed {
-    background-color: transparent;
-    color: #888;
-    border: none;
-    padding: 8px 0;
-    cursor: pointer;
-    font-size: 14px;
-    width: 100%;
-}
-
-#clear-completed:hover {
-    color: #555;
-}
-
-.auth-buttons {
+.DB-buttons {
     display: flex;
     gap: 40px;
     margin-top: 20px;
     justify-content: center;
 }
 
-.auth-btn {
+.DB-btn {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -191,16 +177,16 @@ header h1 {
     transition: background-color 0.3s;
 }
 
-#register-btn {
-    background-color: #4CAF50;
-    color: white;
-}
-
-#login-btn {
+#add-DB-btn {
     background-color: #2196F3;
     color: white;
 }
 
-.auth-btn:hover {
+#clear-DB-btn {
+    background-color: #f32121;
+    color: white;
+}
+
+.DB-btn:hover {
     opacity: 0.9;
 }
