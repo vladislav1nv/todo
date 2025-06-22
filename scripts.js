@@ -6,9 +6,7 @@ const addDBBtn = document.getElementById('add-DB-btn')
 
 let tasks = []
 
-tasks.forEach((task) => renderTask(task))
-
-checkEmptyList()
+loadTasks()
 
 // Добавление задачи
 addTaskBtn.onclick = function () {
@@ -86,9 +84,7 @@ function renderTask(task) {
 }
 
 // Сохранение в базу данных
-addDBBtn.onclick = saveTasks()
-
-function saveTasks() {
+addDBBtn.onclick = function () {
     fetch("http://localhost:5000/save-tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -104,5 +100,7 @@ function loadTasks() {
     .then(res => res.json())
     .then(data => {
         tasks = data;
+        tasks.forEach((task) => renderTask(task))
+        checkEmptyList()
     })
 }
