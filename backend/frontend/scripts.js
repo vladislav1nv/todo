@@ -85,7 +85,7 @@ function renderTask(task) {
 
 // Сохранение в базу данных
 addDBBtn.onclick = function () {
-    fetch("http://localhost:5000/save-tasks", {
+    fetch("/save-tasks", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(tasks)
@@ -96,7 +96,7 @@ addDBBtn.onclick = function () {
 
 // Загрузка из базы данных
 function loadTasks() {
-    fetch("http://localhost:5000/get-tasks")
+    fetch("/get-tasks")
     .then(res => res.json())
     .then(data => {
         tasks = data;
